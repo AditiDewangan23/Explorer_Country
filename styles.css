@@ -1,0 +1,494 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* Navigation Bar */
+.navbar {
+    background-color: #333;
+    color: white;
+    padding: 12px 22px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    background-image: url("https://w0.peakpx.com/wallpaper/241/159/HD-wallpaper-black-stars-black-aesthetic.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 70px;
+}
+
+/* Heading */
+h1 {
+    font-size: 60px;
+    text-align: center;
+    background: linear-gradient(45deg, #000000, #1e90ff, #ffffff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+    margin: 20px 40px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7), 0 0 5px rgba(30, 144, 255, 0.3);
+    letter-spacing: 2px;
+    padding-bottom: 10px;
+    animation: glowEffect 2s infinite alternate;
+}
+
+@keyframes glowEffect {
+    0% {
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7), 0 0 5px rgba(30, 144, 255, 0.3);
+    }
+    100% {
+        text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7), 0 0 8px rgba(255, 255, 255, 0.5);
+    }
+}
+
+/* Search Bar */
+.search-bar {
+    padding: 12px;
+    font-size: 16px;
+    border: 2px solid #333;
+    border-radius: 10px;
+    background: linear-gradient(45deg, #1c1c1c, #1e90ff);
+    color: white;
+    margin-left: 580px;
+    transition: all 0.3s ease-in-out;
+    outline: none;
+}
+
+.search-bar:hover {
+    background: linear-gradient(45deg, #1c1c1c, #00bfff);
+    border-color: #1e90ff;
+}
+
+/* Filter Select */
+.filter-select {
+    padding: 12px;
+    font-size: 16px;
+    border: 2px solid #333;
+    border-radius: 10px;
+    background: linear-gradient(45deg, #1c1c1c, #1e90ff);
+    color: white;
+    transition: all 0.3s ease-in-out;
+    outline: none;
+}
+
+.filter-select:hover {
+    background: linear-gradient(45deg, #1c1c1c, #00bfff);
+    border-color: #1e90ff;
+}
+
+.filter-select option {
+    background: #222;
+    color: white;
+    padding: 10px;
+    border: none;
+}
+
+.filter-select:focus {
+    outline: none;
+    border-color: #1e90ff;
+}
+
+.filter-select option:hover {
+    background-color: #444;
+    color: white;
+}
+
+.search-bar::placeholder {
+    color: #a0a0a0;
+    opacity: 1;
+}
+
+/* Instructions Button */
+#instructions-button {
+    width: 120px;
+    padding: 12px;
+    background: linear-gradient(45deg, #1e90ff, #333);
+    color: white;
+    border: 1px solid white;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+    outline: none;
+}
+
+#instructions-button:hover {
+    background: linear-gradient(45deg, #1c1c1c, #1e90ff);
+    transform: scale(1.05);
+    box-shadow: 0 0 10px rgba(30, 144, 255, 0.6), 0 0 15px rgba(0, 0, 0, 0.4);
+    border-color: #00bfff;
+}
+
+#instructions-button:focus {
+    outline: none;
+    box-shadow: 0 0 10px rgba(30, 144, 255, 0.8);
+    border-color: #00bfff;
+}
+
+/* Media Query for Medium Devices (e.g., iPads) */
+@media (min-width: 768px) and (max-width: 1024px) {
+
+    /* Heading */
+    h1 {
+        font-size: 45px; 
+        margin: 20px 20px;
+        text-align: center;
+    }
+
+    /* Search Bar */
+    .search-bar {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .button-container {
+        display: flex;
+        justify-content: space-between;
+        width: 100%; 
+        gap: 10px; 
+        margin-top: 10px;
+    }
+
+    .filter-select {
+        flex: 2; 
+    }
+
+    #region-search-button,
+    #instructions-button {
+        flex: 1; 
+    }
+    
+    .filter-select,
+    #region-search-button,
+    #instructions-button {
+        width: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 30px;
+        margin: 10px 0;
+        text-align: center;
+    }
+
+    .search-bar {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .filter-select,
+    #region-search-button,
+    #instructions-button {
+        width: auto; 
+        margin-bottom: 5px;
+    }
+
+    .button-container {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        gap: 5px;
+    }
+
+    .filter-select {
+        flex: 2;
+    }
+
+    #region-search-button,
+    #instructions-button {
+        flex: 1; 
+    }
+}
+
+  .flag {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+  }
+
+  /* Overlay */
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: none;
+    z-index: 999;
+  }
+
+  /* Search Container */
+  .search-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .search-bar {
+    padding: 10px;
+    font-size: 16px;
+    margin-right: 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+
+  .filter-select {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+
+  button {
+    margin: 0 5px;
+  }
+
+  .search-container>* {
+    margin: 0 10px;
+  }
+
+  button {
+    padding: 10px 15px;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  #search-button {
+      width: 100px;
+      padding: 12px;
+      background: linear-gradient(45deg, #1e90ff, #333); 
+      color: white; 
+      border: 1px solid white; 
+      border-radius: 8px; 
+      font-size: 16px; 
+      cursor: pointer; 
+      text-align: center; 
+      transition: all 0.3s ease-in-out;
+      outline: none; 
+    }
+   
+    #search-button:hover {
+      background: linear-gradient(45deg, #1c1c1c, #1e90ff); 
+      transform: scale(1.05); 
+      box-shadow: 0 0 10px rgba(30, 144, 255, 0.6), 0 0 15px rgba(0, 0, 0, 0.4); 
+    }
+    
+    #search-button:focus {
+      outline: none; 
+      box-shadow: 0 0 10px rgba(30, 144, 255, 0.8); 
+    }
+
+  button:hover {
+    background-color: #45a049;
+  }
+  
+    body {
+background: #000;
+overflow: hidden;
+margin: 0;
+padding: 0;
+position: relative;
+}
+
+/* Milky Way background */
+#milky-way-background {
+position: fixed;
+top: 0;
+left: 0;
+width: 200%;
+height: 200%;
+background: radial-gradient(circle at center, #0d0d47, #000), url('path/to/milky-way.jpg');
+background-size: cover;
+animation: moveMilkyWay 60s linear infinite;
+z-index: -2;
+}
+
+@keyframes moveMilkyWay {
+0% {
+  transform: translate(0, 0);
+}
+100% {
+  transform: translate(-500px, -500px);
+}
+}
+
+/* Star field */
+.star {
+position: absolute;
+background: white;
+border-radius: 50%;
+width: 2px;
+height: 2px;
+opacity: 0.8;
+animation: twinkle 2s infinite alternate;
+}
+
+@keyframes twinkle {
+0% {
+  opacity: 0.5;
+}
+100% {
+  opacity: 1;
+}
+}
+
+/* Shooting stars */
+.shooting-star {
+position: absolute;
+width: 2px;
+height: 100px;
+background: linear-gradient(white, transparent);
+transform: rotate(45deg);
+opacity: 0;
+animation: shooting 3s linear infinite;
+}
+
+@keyframes shooting {
+0% {
+  opacity: 1;
+  transform: translateY(0) rotate(45deg);
+}
+100% {
+  opacity: 0;
+  transform: translateY(-500px) translateX(500px) rotate(45deg);
+}
+}
+
+.show-more-button {
+  display: block;
+  margin: 20px auto;
+  background: linear-gradient(45deg, #00d2ff, #3a7bd5, #2a2a72); 
+  color: white; 
+  padding: 15px 30px;
+  border: 2px solid #fff; 
+  border-radius: 50px; 
+  font-size: 18px; 
+  text-transform: uppercase;
+  font-weight: bold;
+  position: absolute;
+  bottom: 20px;
+  left: 50%; 
+  transform: translateX(-50%); 
+  cursor: pointer;
+  outline: none;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5), 0 0 20px rgba(255, 255, 255, 0.7); 
+  transition: all 0.3s ease-in-out; 
+}
+
+.show-more-button:hover {
+  background: linear-gradient(45deg, #000000, #1e90ff, #ffffff); 
+  box-shadow: 0 0 10px rgba(30, 144, 255, 0.6), 0 0 15px rgba(255, 255, 255, 0.5), 0 0 20px rgba(0, 0, 0, 0.5); 
+  transform: translateX(-50%) scale(1.05); 
+}
+
+.show-more-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('https://www.transparenttextures.com/patterns/stardust.png') repeat;
+  opacity: 0.3;
+  pointer-events: none;
+  animation: moveStars 2s linear infinite;
+}
+
+@keyframes moveStars {
+  0% {
+      background-position: 0 0;
+  }
+  100% {
+      background-position: 100% 100%;
+  }
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(0, 0, 0, 0.8); 
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+  width: 80%;
+  max-width: 400px;
+  transition: transform 0.3s;
+  border: 1px solid #fafdfa;
+}
+
+.modal:hover {
+  transform: translate(-50%, -50%) scale(1.05);
+}
+
+.modal h2 {
+  margin-bottom: 10px;
+  color: #fff; 
+}
+
+.modal p {
+  color: #fff; 
+}
+
+.modal .close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: transparent; 
+  border: 2px solid #1e90ff; 
+  color: white; 
+  font-size: 24px; 
+  padding: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  border-radius: 50%; 
+  width: 40px; 
+  height: 40px; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 5px rgba(30, 144, 255, 0.6); 
+}
+
+.modal .close-btn:hover {
+  background-color: #1e1e1e; 
+  color: #1e90ff;
+  transform: scale(1.1); 
+  box-shadow: 0 0 10px rgba(30, 144, 255, 0.8); 
+}
+
+
+.modal .close-btn:active {
+  transform: scale(1); 
+  box-shadow: 0 0 5px rgba(30, 144, 255, 0.5); 
+  background-color: #333; 
+}
+
+.globe-container {
+filter: drop-shadow(0 0 5px #00ff00); 
+}
